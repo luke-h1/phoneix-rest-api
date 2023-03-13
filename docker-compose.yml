@@ -1,15 +1,15 @@
 version: '3'
 services:
   db:
-    container_name: postgres
+    container_name: phoneix_db
     image: 'postgres:latest'
     restart: always
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: default_database
+      POSTGRES_USER: realdeal
+      POSTGRES_PASSWORD: realdeal
+      POSTGRES_DB: real_deal_api_dev
     volumes: 
       - .dbdata:/var/lib/postgres 
     expose:
